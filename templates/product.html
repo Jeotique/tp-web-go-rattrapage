@@ -1,0 +1,21 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Name}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{.Name}}</h1>
+    </header>
+    <div class="container product-detail">
+        <img src="{{.Image}}" alt="{{.Name}}">
+        <div>
+            <p>{{.Description}}</p>
+            <p class="product-price">Prix : {{.Price}}€ {{if .Discounted}}<span class="discounted">{{.OriginalPrice}}€</span>{{end}}</p>
+            <p>Tailles disponibles : {{range .Sizes}}{{.}} {{end}}</p>
+            <a href="/">Retour à la liste des produits</a>
+        </div>
+    </div>
+</body>
+</html>

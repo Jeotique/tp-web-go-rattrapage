@@ -1,0 +1,29 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un produit</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter un nouveau produit</h1>
+    </header>
+    <div class="container">
+        <form action="/add" method="POST">
+            <label for="name">Nom du produit :</label>
+            <input type="text" name="name" id="name" required>
+            
+            <label for="price">Prix :</label>
+            <input type="number" name="price" id="price" required step="0.01">
+
+            <label for="originalPrice">Prix original (promotion) :</label>
+            <input type="number" name="originalPrice" id="originalPrice" step="0.01" placeholder="Laissez vide si non applicable">
+
+            <label for="description">Description :</label>
+            <textarea name="description" id="description" required></textarea>
+            
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+</body>
+</html>
